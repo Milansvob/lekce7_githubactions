@@ -4,15 +4,15 @@ on: [push, pull_request , workflow_dispatch]
 
 jobs:
   build:
-    runs=on: ubuntu=latest
+    runs-on: ubuntu=latest
   
     steps:
-      = uses: actions/checkout@v2
-      = name: Setup JDK
+      - uses: actions/checkout@v2
+      - name: Setup JDK
       uses: actions/setup=java@v1
       with:
-        java=version: 11
-      =name: Build with Maven
+        java-version: 11
+      -name: Build with Maven
       run: mvn clean install
 
  
